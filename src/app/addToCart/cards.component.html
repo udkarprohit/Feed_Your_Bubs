@@ -1,0 +1,148 @@
+<div class="container-fluid mt-5">
+  <!--DELETE MODAL-->
+  <div id="delete" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="addmodal-header" style="background-color: #47c9a2; color: aliceblue">
+          <svg class="bi bi-exclamation-circle svg-icon text-light" viewBox="0 0 16 16" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path
+              d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+          </svg>
+        </div>
+        <div class="modal-body text-center" style="padding: 30px 0px 30px 0px">
+          <h4>Caution!</h4>
+          <p id="lblCode"></p>
+          <p>Are you sure you want to delete this entry ?</p>
+          <input type="hidden" id="hdnCode" name="hdnCode" />
+        </div>
+        <div class="modal-footer"></div>
+        <div class="row justify-content-center">
+          <div class="col-auto mb-5">
+            <button type="button" class="btn btn-danger modal-yes rounded-0" data-toggle="modal" id="btnDel"
+              data-target="#myadd">
+              Yes
+            </button>
+            <button type="button" class="btn btn-warning modal-no rounded-0" data-dismiss="modal" id="btnNo">
+              No
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="mb-5 text-center">Shopping Cart</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="table-responsive">
+        <table id="myTable" class="table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Name</th>
+              <th>Qty</th>
+              <th>Price</th>
+              <!--<th class="text-right">
+                       <span id="amount" class="amount">Amount</span>
+                    </th>-->
+              <th>Amount</th>
+              <th>action</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="cart_Items">
+            <tr *ngFor="let item of cart_Items">
+              <td>
+                <div class="product-img">
+                  <div class="img-prdct">
+                    <img src="{{ url + item.cartitem.image }}" />
+                  </div>
+                </div>
+              </td>
+              <td>
+                <p>{{ item.cartitem.name }}</p>
+              </td>
+              <td>
+                <p>{{ item.qty }}</p>
+                <!--<input type="text" name="qty" class="qty form-control" value="{{  item.qty }}"/>
+                      <div class="button-container">
+                          <button class="cart-qty-plus" type="button" value="+" (click)="inCrement(this.item,item.qty)">+</button>
+                          <input type="text" name="qty" min="0" class="qty form-control" value="{{  item.qty }}"/>
+                          <button class="cart-qty-minus" type="button" value="-" (click)="deCrement(this.item,item.qty)">-</button>
+                       </div>-->
+              </td>
+              <td>
+                <p>{{ item.cartitem.rate }}</p>
+              </td>
+              <td>
+                Rs
+                <span id="amount" class="amount">{{ item.cartitem.rate }}</span>
+              </td>
+              <td>
+                <button (click)="itemDelete(item.id)" class="icon btn btn-outline-danger  ">Delete</button>
+                <!--<button
+                  class="btn btn-light bi bi-trash text-danger"
+                  onclick="itemDelete(item.id)"
+                ></button>-->
+              </td>
+              <!-- <td><button data-toggle="modal" data-target="#delete" id="delete_btn" class="icon"><i class="fas fa-trash"></i></button></td>
+          
+               <i (onclick)="itemDelete(item.id)" class="bi bi-trash text-danger"></i>
+              </td>-->
+            </tr>
+
+            <!---- ending table rows  ---------->
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4"></td>
+              <td>
+                <strong>TOTAL = Rs
+                  <span id="total" class="total">{{ getTotal() }}</span>
+                </strong>
+              </td>
+              <td>
+                <button [routerLink]="['/pay']" class="icon btn btn-dark  btn-lg ">Order_Now</button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+        <br />
+        <br />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 
+<div
+  class="modal fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Success</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>-->

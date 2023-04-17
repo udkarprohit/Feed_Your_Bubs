@@ -1,0 +1,106 @@
+.carousel {
+  background:#512DA8;
+}
+
+.carousel-item {
+height: 300px;
+}
+
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 300px;
+}
+
+
+.row-header{
+    margin:0px auto;
+    padding:0px;
+  }
+  .row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height:400px;
+  }
+  .footer{
+    background-color: #D1C4E9;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+  }
+  .jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background: #9575CD ;
+    color:floralwhite;
+  }
+  address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+  }
+  body{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+  }
+  .navbar-dark{
+    background-color: #512DA8;
+  }
+  .tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  .gallery-block{
+    padding: 60px;
+    padding-top: 60px;
+  
+  }
+  .gallery-block .heading{
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .gallery-block .heading h2{
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  .gallery-block.art-gallery h6{
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .gallery-block.art-gallery .art{
+    transition: 0.4s easy;
+  }
+  .gallery-block.art-gallery .art img{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 15);
+  }
+  .gallery-block.art-gallery .art-body{
+    text-align: center;
+  }
+  .gallery-block.art-gallery .art-body p{
+    font-size: 15px;
+  }
+  .gallery-block.art-gallery a{
+    color: #212529;
+  }
+  .gallery-block.art-gallery a:hover{
+    text-decoration: none;
+  }
+  .gallery-block.art-gallery .art{
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 15);
+  }
+  .gallery-block.art-gallery .art h3{
+    text-align: center;
+  }
+  @media (min-width : 576px){
+    .gallery-block .transfrom-on-hover:hover{
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 15) !important;
+    }
+  }
+  

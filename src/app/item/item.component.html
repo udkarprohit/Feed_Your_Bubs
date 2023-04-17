@@ -1,0 +1,33 @@
+<div class="container mt-5 justify-content-center">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+    <div class="card" [routerLink]="['/item',product.id ]">
+        <img class="card-img-top" src="{{ url + product.image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name}} {{ product.rate }}</h5>
+          <p class="card-text">{{ product.description}}</p>
+          <a href="#" routerLink="/cards" class="btn btn-primary" (click)="onSubmit()">ADD TO CART</a>
+        </div>
+      </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+<div class="card row justify-content-center align-items-center">
+    <img height="200px" width="300px" src="{{ url + product.image}}" alt="Responsive image"class="img-thumbnail">
+    <div class="content">
+      <div class="row">
+        <div class="details">
+          <span>{{ product.name}}</span>
+          <p>{{ product.description}}</p>
+        </div>
+        <div class="price">{{ product.rate }}</div>
+      </div>
+      <div class="buttons">
+        <button>Buy Now</button>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>-->

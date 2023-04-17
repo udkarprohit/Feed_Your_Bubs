@@ -1,0 +1,95 @@
+<div class="container mt-3">
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/img/c.jpg" alt="Cake" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Cake</h3>
+          <p>Cake is a form of sweet food made from flour, sugar,
+            and other ingredients, that is usually baked. In their oldest forms, cakes were
+            modifications of bread, but cakes now cover a wide range of preparations that can be
+            simple or elaborate, and that share features with other desserts such as pastries,
+            meringues, custards, and pies.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/c.jpg" alt="Candy" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Candy</h3>
+          <p>Candy, also called sweets (British English) or lollies
+            (Australian English, New Zealand English),[a] is a confection that features sugar as a
+            principal ingredient. The category, called sugar confectionery, encompasses any sweet confection,
+            including chocolate, chewing gum, and sugar candy. Vegetables,
+            fruit, or nuts which have been glazed and coated with sugar are said to be candied.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <hr>
+  <div class="gallery-block art-gallery">
+    <div class="container">
+      <div class="heading">
+        <h2>Category Of Available Items</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="art border-0 transform-on-hover">
+            <a class="lightbox" href="#" [routerLink]="['/categories', 'CAKES']"><img src="./assets/img/Cakes.jpg"
+                alt="Responsive image" class="img-thumbnail"></a>
+            <h3>CAKES</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="art border-0 transform-on-hover">
+            <a class="lightbox" href="#" [routerLink]="['/categories', 'BREADS']"><img src="../assets/img/breads.jpg"
+                alt="Responsive image" class="img-thumbnail"></a>
+            <h3>BREADS</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="art border-0 transform-on-hover">
+            <a class="lightbox" href="#" [routerLink]="['/categories', 'COOLDRINKS']"><img src="./assets/img/cooldrinks.jpg"
+                alt="Responsive image" class="img-thumbnail"></a>
+            <h3>COOLDRINKS</h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-xm-6 img-responsive">
+          <div class="art border-0 transform-on-hover">
+            <a class="lightbox" href="#" [routerLink]="['/categories', 'SWEETS']"><img src="./assets/img/sweets.jpg" alt="Responsive image"
+                class="img-thumbnail"></a>
+            <h3>SWEETS</h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-xm-6 img-responsive">
+          <div class="art border-0 transform-on-hover">
+            <a class="lightbox" href="#" [routerLink]="['/categories', 'FASTFOODS']"><img src="./assets/img/fastfood.jpg"
+                alt="Responsive image" class="img-thumbnail"></a>
+            <h3>FAST FOOD</h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-xm-6 img-responsive">
+          <div class="art border-0 transform-on-hover">
+            <a class="lightbox" href="#" [routerLink]="['/categories', 'BISCUITS']"><img src="./assets/img/biscuits.jpg"
+                alt="Responsive image" class="img-thumbnail"></a>
+            <h3>BISCUITS</h3>
+          </div>
+        </div>
+      </div>
+    </div>
